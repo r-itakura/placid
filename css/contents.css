@@ -1,0 +1,836 @@
+body , html {   
+	background-color:#001640;
+    height: 100%;
+}
+/*フォント*/
+.clsFontGothic{
+	font-family:"ＭＳ Ｐゴシック";
+	text-decoration: none;
+}
+/*エラーメッセージ*/
+.clsErrMsg{
+	font-size:11px;
+	color:red;
+}
+/*注意文言*/
+.clsNotice{
+	padding-left:50px;
+	font-size:12px;
+	color:#000000;
+}
+
+/**********/
+/*ヘッダー*/
+/**********/
+#divHeader{
+	background-color:#000000;
+	height:65px;
+	width:100%;
+	min-width:991px;
+}
+#divHaderInner {
+	width: 991px;
+	margin: auto;
+}
+#divLogo{
+	float:left;
+	margin-top:7px;
+}
+#divHdrLnk{
+	float:right;
+	margin-top:25px;
+}
+.clsHdrLnk{
+	font-size:11px;
+	color:#999999;
+}
+
+/**************/
+/*トップページ*/
+/**************/
+#divContentsMainTop{
+	clear:both;
+	width:991px;
+	overflow:hidden;
+	min-height:400px;
+	padding-bottom:50px;
+	margin:auto;
+}
+#divMainView{
+	clear:both;
+	width:100%;
+	min-width:991px;
+	height:514px;
+	background-image:url(../images/imgMainView.jpg);
+	background-repeat:no-repeat;
+	background-size:100% auto;
+	background-position:center center;
+}
+/*ナビゲーション*/
+#divNavTop{
+	height:62px;
+	background-image:url(../images/navBack.png);
+	background-repeat:repeat-x;
+	float:left;
+	margin-top:452px;
+	width:100%;
+}
+#divNavBtn{
+	margin-left:245px;
+	width:991px;
+	margin:auto;
+}
+#navTop{
+	float:left;
+	margin-top:0px
+}
+#navAbout{
+	float:left;
+	margin-top:0px;
+}
+#navPrice{
+	float:left;
+	margin-top:0px;
+}
+#navList{
+	float:left;
+	margin-top:0px;
+}
+#navAccess{
+	float:left;
+	margin-top:0px;
+}
+/*コンテンツ*/
+#divContents{
+	clear:both;
+	min-width:991px;
+	margin: auto;
+}
+#divBanner{
+	float:left;
+	width: 200px;
+	margin-left: 59px;
+}
+#banner1{
+	display:block;
+	margin-top:21px;
+}
+#banner2{
+	display:block;
+	margin-top:21px;
+}
+#divNews{
+	float:left;
+	width: 732px;
+}
+#divNewsTitle{
+	margin-left:87px;
+	margin-top:21px;
+}
+#divArticle{
+	margin-left:126px;
+	margin-top:25px;
+}
+.clsArticleDay{
+	font-weight:bold;
+	font-size:12px;
+	color:#cccccc;
+}
+.clsArticle{
+	font-size:12px;
+	color:#a97f4c;
+}
+#article1{
+	display:block;
+}
+#article2{
+	display:block;
+	margin-top:19px;
+}
+#article3{
+	display:block;
+	margin-top:19px;
+}
+#article4{
+	display:block;
+	margin-top:19px;
+}
+#article5{
+	display:block;
+	margin-top:19px;
+}
+#ichiran{
+	margin-top:19px;
+	margin-left:450px;
+	margin-bottom:100px;
+
+}
+
+/************/
+/*プラン一覧*/
+/************/
+#divContentsMainRsv{
+	clear:both;
+	width:991px;
+	background-color:#ffffff;
+	overflow:hidden;
+	min-height:647px;
+	padding-bottom:50px;
+	margin:auto;
+}
+#divList{
+	clear:both;
+	width:991px;
+	background-color:#ffffff;
+	overflow:hidden;
+	padding-bottom:50px;
+	min-height:647px;
+}
+#divRsvNav{
+	width:760px;
+	height:52px;
+	margin:auto;
+	margin-top:34px;
+	margin-bottom:65px;
+}
+ol{
+	list-style:none;
+}
+#divRsvNav li{
+	float:left;	
+}
+#liImgArrow1{
+	margin-top:20px;
+	margin-left:34px;
+}
+#liImgRsvIn{
+	margin-left:31px;
+}
+#liImgArrow2{
+	margin-top:20px;
+	margin-left:34px;
+}
+#liImgRsvConf{
+	margin-left:31px;
+}
+#liImgArrow3{
+	margin-top:20px;
+	margin-left:34px;
+}	
+#liImgRsvComp{
+	margin-left:31px;
+}
+#divListMain{
+	clear:both;
+	width:956px;
+	margin:auto;
+}
+#divListTtlBack{
+	width:956px;
+	height:28px;
+	background-color:#000000;
+	color:#ffffff;
+	margin-top:20px;
+	
+}
+#divListTtl{
+	float:left;
+	margin-left:20px;
+	margin-top:5px;
+	
+}
+.clsListTitle{
+	font-size:15px;
+	color:#ffffff;
+}
+#divImgPlan{
+	float:left;
+	width:426px;
+	height:300px;
+	margin-top:44px;
+	margin-left:59px;
+	margin-bottom:50px;
+}
+#divPlanComment{
+	float:left;
+	width:307px;
+	height:300px;
+	margin-top:44px;
+	margin-left:0px;
+}
+.clsPlanComment{
+	font-size:13px;
+	color:#000000;
+}
+#divBtnRsv{
+	float:left;
+	width:140px;
+	margin-top:303px;
+	margin-left:0px;
+}
+
+/**************/
+/*予約詳細入力*/
+/**************/
+#divRsvDtlIn{
+	clear:both;
+	width:991px;
+	background-color:#ffffff;
+	overflow:hidden;
+	padding-bottom:50px;
+}
+#divRsvDtlInMain{
+	clear:both;
+	width:760px;
+	margin:auto;
+}
+#divRsvDtlInMsg{
+	float:left;
+}
+.clsEx{
+	font-family:"ＭＳ Ｐゴシック";
+	font-size:14px;
+	color:#000000;
+	text-decoration: none;
+}
+.clsExRed{
+	font-family:"ＭＳ Ｐゴシック";
+	font-size:14px;
+	color:red;
+	text-decoration: none;
+}
+#divRsvDtlInInput{
+	float:left;
+	margin-top:10px;
+	margin-bottom:32px;
+}
+#divRsvDtlInInput table{	
+	font-family:"ＭＳ Ｐゴシック";
+	color:#000000;
+	border:solid 1px #999999;
+	width:760px;
+}
+#divRsvDtlInInput table tr{	
+	border:solid 1px #999999;
+}
+#divRsvDtlInInput table th{	
+	border:solid 1px #999999;
+	font-size:13px;
+	padding-left:19px;
+}
+#divRsvDtlInInput table th .clsExRed{	
+	font-family:"ＭＳ Ｐゴシック";
+	font-size:13px;
+	color:red;
+}
+#divRsvDtlInInput table td{	
+	border:solid 1px #999999;
+	padding-top:18px;
+	padding-bottom:13px;
+	padding-left:19px;
+	font-size:13px;
+}
+.clsTblHead{
+	background-color:#9b784e;
+}
+.clsTdleft{
+	border-left:none;
+}
+.clsTblContent{
+	background-color:#ffffff;
+}
+.clsNotes{
+	font-family:"ＭＳ Ｐゴシック";
+	font-size:11px;
+}
+#txtMail{
+	margin-bottom:10px;
+	width:300px;
+}
+#txtMailConf{
+	width:300px;
+}
+#txtSei{
+	width:130px;
+}
+#txtMei{
+	width:130px;
+}
+#txtSeiKana{
+	width:130px;
+}
+#txtMeiKana{
+	width:130px;
+}
+#divBtn{
+	clear:both;
+	width:225px;
+	height:38px;
+	margin:auto;
+}
+#divBtnBack{
+	float:left;
+}
+#divBtnConf{
+	float:right;
+}
+
+/**************/
+/*予約詳細確認*/
+/**************/
+#divRsvDtlConf{
+	clear:both;
+	width:991px;
+	background-color:#ffffff;
+	overflow:hidden;
+	padding-bottom:50px;
+}
+#divRsvDtlConfMain{
+	clear:both;
+	width:760px;
+	margin:auto;
+}
+#divRsvDtlConfMsg{
+	float:left;
+}
+#divRsvDtlConfConfirm{
+	float:left;
+	margin-top:10px;
+	margin-bottom:32px;
+}
+#divRsvDtlConfConfirm table{	
+	font-family:"ＭＳ Ｐゴシック";
+	color:#000000;
+	border:solid 1px #999999;
+	width:760px;
+}
+#divRsvDtlConfConfirm table tr{	
+	border:solid 1px #999999;
+}
+#divRsvDtlConfConfirm table th{	
+	border:solid 1px #999999;
+	font-size:13px;
+	padding-left:19px;
+}
+#divRsvDtlConfConfirm table th .clsExRed{	
+	font-family:"ＭＳ Ｐゴシック";
+	font-size:13px;
+	color:red;
+}
+#divRsvDtlConfConfirm table td{	
+	border:solid 1px #999999;
+	padding-top:18px;
+	padding-bottom:13px;
+	padding-left:19px;
+	font-size:13px;
+}
+#divBtnCommit{
+	float:right;
+}
+
+/**********/
+/*予約完了*/
+/**********/
+#divRsvEnd{
+	clear:both;
+	width:991px;
+	background-color:#ffffff;
+	overflow:hidden;
+	min-height:647px;
+}
+#rsvEndMsg{
+	margin-bottom:100px;
+}
+#divBtnTop{
+	width:92px;
+	margin:auto;
+}
+
+/*******************/
+/*PLACID HOTELSとは*/
+/*******************/
+#divContentsMain{
+	clear:both;
+	width:991px;
+	background-color:#000000;
+	overflow:hidden;
+	min-height:647px;
+	padding-bottom:50px;
+	margin:auto;
+}
+#divImgNightView{
+	clear:both;
+	width:991px;
+	height:201px;
+	background-image:url(../images/imgNightView.jpg);
+	background-repeat:no-repeat;
+	background-size:100% auto;
+	background-position:center 0;
+}
+#divTitleBack{
+	width:991px;
+	height:50px;
+	background-image:url(../images/aboutBack.png);
+	background-repeat:repeat-x;
+	float:left;
+	margin-top:150px;
+}
+#divTitle{
+	float:left;
+	margin-top:22px;
+	margin-left:31px;
+}
+#divContentsMain hr{
+	border:solid 1px #333333;
+	margin-top:1px;
+	margin-bottom:0px;
+}
+#divAbout{
+	width:991px;
+	height:500px;
+}
+#divImgAbout{
+	width:594px;
+	margin:auto;
+	padding-top:102px;
+}
+#divAboutNote{
+	width:300px;
+	margin:auto;
+	padding-top:50px;
+}
+#divRoom{
+	width:991px;
+	height:386px;
+}
+#divLblRoom{
+	width:38px;
+	height:19px;
+	margin-left:31px;
+}
+#divRoom hr{
+	border:solid 1px #7f6039;
+	width:938px;
+}
+#divImgRoom{
+	float:left;
+	padding-top:25px;
+	margin-left:74px;
+}
+#divRoomNote{
+	width:300px;
+	float:left;
+	padding-top:25px;
+	margin-left:74px;
+}
+#divBreakfast{
+	width:991px;
+	height:386px;
+}
+#divLblBreakfast{
+	width:42px;
+	height:19px;
+	margin-left:31px;
+}
+#divBreakfast hr{
+	border:solid 1px #7f6039;
+	width:938px;
+}
+#divImgBreakFast{
+	float:left;
+	padding-top:25px;
+	margin-left:74px;
+}
+#divBreakFastNote{
+	width:300px;
+	float:left;
+	padding-top:25px;
+	margin-left:74px;
+}
+#divSpa{
+	width:991px;
+	height:386px;
+}
+#divLblSpa{
+	width:35px;
+	height:15px;
+	margin-left:31px;
+}
+#divSpa hr{
+	border:solid 1px #7f6039;
+	width:938px;
+}
+#divImgSpa{
+	float:left;
+	padding-top:25px;
+	margin-left:74px;
+}
+#divSpaNote{
+	width:300px;
+	float:left;
+	padding-top:25px;
+	margin-left:74px;
+}
+.clsAboutArticle{
+	font-size:12px;
+	color:#999999;
+	text-align:center;
+	line-height:1.5em;
+}
+.clsAboutDtlArticle{
+	font-size:12px;
+	color:#999999;
+	text-align:left;
+	line-height:1.5em;
+}
+/********/
+/*料金表*/
+/********/
+#divImgPrice{
+	width:432px;
+	height:228px;
+	margin:auto;
+	margin-top:50px;
+}
+
+/************/
+/*ホテル一覧*/
+/************/
+#divImgOte{
+	width:794px;
+	height:452px;
+	margin:auto;
+	margin-top:87px;
+}
+#divImgKudan{
+	width:794px;
+	height:452px;
+	margin:auto;
+	margin-top:56px;
+}
+
+/**********/
+/*アクセス*/
+/**********/
+#divTrain{
+	width:794px;
+	margin:auto;
+	margin-top:63px;	
+}
+#divImgLblTrain{
+
+}
+#divImgTrainMap{
+	width:794px;
+	height:652px;
+	margin-top:5px;
+}
+#divMap{
+	width:794px;
+	margin:auto;
+	margin-top:37px;
+}
+#divOte{
+	float:left;
+	width:387px;
+}
+#divImgLblOte{
+	width:212px;
+	height:21px;
+}
+#divImgOteMap{
+	width:387px;
+	height:361px;;
+	margin-top:5px;
+}
+#divKudan{
+	float:right;
+	width:387px;
+}
+#divImgLblKudan{
+	width:212px;
+	height:21px;
+}
+#divImgKudanMap{
+	width:387px;
+	height:361px;;
+	margin-top:5px;
+}
+
+
+
+
+/****************/
+/*ナビゲーション*/
+/****************/
+#ulNavBtn li ul{
+	 display: none;
+	 position:relative;
+	 z-index:1;
+}
+#divNav{
+	height:62px;
+	background-image:url(../images/navBack.png);
+	background-repeat:repeat-x;
+	float:left;
+	width:100%;
+	min-width:991px;
+}
+#divNavBtn{
+	margin-left:245px;
+	width:991px;
+	margin:auto;
+}
+#navTop{
+	float:left;
+	margin-top:0px
+}
+#navAbout{
+	float:left;
+	margin-top:0px;
+}
+#navPrice{
+	float:left;
+	margin-top:0px;
+}
+#navList{
+	float:left;
+	margin-top:0px;
+}
+#navAccess{
+	float:left;
+	margin-top:0px;
+}
+
+/**********/
+/*空室検索*/
+/**********/
+#divSearch{
+	clear:both;
+	height:73px;
+	background-image:url(../images/searchBack.png);
+	background-repeat:repeat-x;
+	min-width:991px;
+}
+#divSearchInner{
+	width:991px;
+	margin:auto;
+}
+hr{
+	border:solid 1px #293c5f;
+	margin-top:1px;
+	margin-bottom:0px;
+}
+#divLblSearch{
+	float:left;
+	margin-top:28px;
+	margin-left:67px;
+}
+select{
+	font-size:12px;
+}
+#tblSearch{
+	float:left;
+	margin-left:75px;
+	margin-top:16px;
+}
+.clsSearch{
+	font-family:"ＭＳ Ｐゴシック";
+	font-size:11px;
+	color:#cccccc;
+}
+#tdBtnSearch{
+	vertical-align:bottom;
+}
+.clsMargin80{
+	margin-left:80px;
+}
+.clsMargin20{
+	margin-left:20px;
+}
+.clsMargin15{
+	margin-left:10px;
+}
+.clsMargin10{
+	margin-left:10px;
+}
+/**********/
+/*フッター*/
+/**********/
+#divFooter{
+	clear:both;
+	background-color:#000000;
+	width:100%;
+	height:224px;
+	min-width:991px;
+}
+#divFooterInner {
+	width: 991px;
+	margin: auto;
+}
+#divFtLnk{
+	float:left;
+}
+#divFtLnk1{
+	float:left;
+	margin-top:59px;
+}
+#ftLnk1{
+	display:block;
+}
+#ftLnk2{
+	display:block;
+	margin-top:10px;
+}
+#ftLnk3{
+	display:block;
+	margin-top:10px;
+}
+#ftLnk4{
+	display:block;
+	margin-top:10px;
+}
+#divFtLnk2{
+	float:left;
+	margin-top:59px;
+	margin-left:118px;
+}
+#ftLnk5{
+	display:block;
+}
+#divAddr{
+	float:right;
+}
+#divAddrOte{
+  float:left;
+  margin-top:59px;
+  width: 145px;
+  hight:92px;
+}
+#divAddrKudan{
+  float:left;
+  margin-top: 59px;
+  margin-left:25px;
+  width: 145px;
+  hight:92px;
+}
+#divAdmLogin{
+  clear:both;
+  float:right;
+  margin-top:40px;
+}
+.clsFtLnk{
+  font-family:"ＭＳ Ｐゴシック";
+  font-size:11px;
+  color:#999999;
+  text-decoration: none;
+}
+.clsFt{
+	font-family:"ＭＳ Ｐゴシック";
+	font-size:11px;
+	color:#666666;
+	text-decoration:none;
+}
+.clsFtAddr{
+	line-height:1.6em;
+}
