@@ -1,7 +1,10 @@
 <?php
 	session_start ();
+
+	date_default_timezone_set ("Asia/Tokyo");
+
 	require "DBAccessorClass.php";
-	
+
 	if(isset($_POST["hdnTrans"])) {
 		if($_POST["hdnTrans"] === "search"){
 			// 検索ボタンが押された場合。
@@ -13,7 +16,7 @@
 			$_SESSION["rsvDNumCond"] = $_POST["hdnSelRsvDNum"]; //宿泊日数
 			$_SESSION["gstNumCond"] = $_POST["hdnSelGstNum"]; //宿泊者数
 			$_SESSION["chkNoSmkCond"] = $_POST["hdnChkNoSmk"]; // 禁煙フラグ
-			
+
 			// プラン一覧画面へ遷移する。
 			header("Location: ../contents/planList.php");
 		}else if($_POST["hdnTrans"] === "contact"){
@@ -21,7 +24,7 @@
 			header("Location: ../contents/contact.php");
 		}
     }
-	
+
 	// ホテル名リスト取得
 	$dbAccessor = new DBAccessor();
 	$stmt = $dbAccessor->getHotelList();

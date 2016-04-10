@@ -5,10 +5,10 @@ class DBConnectionClass {
 
     // コンストラクタ
     function DBConnectionClass() {
-		$dsn = 'mysql:dbname=site80_dev01;host=localhost';
+		$dsn = 'mysql:dbname=site80_dev01;host=127.0.0.1';
 		$user = 'site80_dev01';
 		$password = 'site80_dev01';
-		
+
 		global $dbh;
 		try{
     		$dbh = new PDO($dsn, $user, $password);
@@ -20,7 +20,7 @@ class DBConnectionClass {
 			die();
 		}
     }
-	
+
 	// PreparedStatement
 	function prepare($sql){
 		global $dbh;

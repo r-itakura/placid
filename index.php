@@ -1,10 +1,14 @@
 <?php
+
 	session_start ();
+
+	date_default_timezone_set ("Asia/Tokyo");
+
 	require "contents/DBAccessorClass.php";
-	
+
 	// セッション情報クリア
-	$_SESSION = array(); 
-	
+	$_SESSION = array();
+
 	if(isset($_POST["hdnTrans"])) {
 		if($_POST["hdnTrans"] === "search"){
 			// 検索ボタンが押された場合。
@@ -27,7 +31,7 @@
 			header("Location: contents/admLogin.php");
 		}
  	}
-	
+
 	// ホテル名リスト取得
 	$dbAccessor = new DBAccessor();
 	$stmt = $dbAccessor->getHotelList();
@@ -60,7 +64,7 @@ $(document).ready(function(){
 	d = new Date() ;
 	month	= d.getMonth()+1;
 	day	= d.getDate();
-	
+
 	// 検索条件
 	$("select[id='selHtlId']").val(1);
 	$("select[id='selRsvDY']").val(1);
@@ -69,7 +73,7 @@ $(document).ready(function(){
 	$("select[id='selRsvDNum']").val(1);
 	$("select[id='selGstNum']").val(1);
 	$("#chkNoSmk").attr("checked", false );
-	
+
 });
 </script>
 <form id="frmIndex" action="<?php print($_SERVER['PHP_SELF']) ?>" method="post">
@@ -113,7 +117,7 @@ $(document).ready(function(){
             </div>
     	</div>
     </div>
-   	<div id="divFooter">	
+   	<div id="divFooter">
         <!--フッター-->
         <?php include("contents/includeFooter.php"); ?>
     </div>

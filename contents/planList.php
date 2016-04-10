@@ -1,7 +1,10 @@
 <?php
 	session_start ();
+
+	date_default_timezone_set ("Asia/Tokyo");
+
 	require "DBAccessorClass.php";
-	
+
 	if(isset($_POST["hdnTrans"])) {
 		if($_POST["hdnTrans"] === "search"){
 			// 検索ボタンが押された場合。
@@ -13,7 +16,7 @@
 			$_SESSION["rsvDNumCond"] = $_POST["hdnSelRsvDNum"]; //宿泊日数
 			$_SESSION["gstNumCond"] = $_POST["hdnSelGstNum"]; //宿泊者数
 			$_SESSION["chkNoSmkCond"] = $_POST["hdnChkNoSmk"]; // 禁煙フラグ
-			
+
 			// プラン一覧画面へ遷移する。
 			header("Location: ../contents/planList.php");
 		}else if($_POST["hdnTrans"] === "contact"){
@@ -24,7 +27,7 @@
 			// 部屋ＩＤをセッションに詰める。
 			$_SESSION["rsvRmId"] = $_POST["hdnRsvRmId"]; // 予約する部屋ＩＤ
 			$_SESSION["rsvPlnId"] = $_POST["hdnPlnId"]; // 予約するプランID
-			
+
 			// 詳細入力画面の入力内容がセッションに残っていた場合削除する。
 			$_SESSION["mail"] = ""; // メールアドレス
 			$_SESSION["sei"] = ""; // 姓
@@ -33,14 +36,14 @@
 			$_SESSION["meiKana"] = ""; // 名カナ
 			$_SESSION["tel"] = ""; // 電話番号
 			$_SESSION["sex"] = ""; // 性別
-			
+
 			// 予約詳細入力画面へ遷移する。
 			header("Location: ../contents/rsvDtlInput.php");
 		}
     }
-	
+
 	$dbAccessor = new DBAccessor();
-	
+
 	// 日付チェック
 	if(checkdate($_SESSION["rsvDMCond"], $_SESSION["rsvDDCond"], $_SESSION["rsvDYCond"])){
 		// 検索条件の取得
@@ -49,18 +52,18 @@
 		$rsvDNumCond = $_SESSION["rsvDNumCond"]; // 宿泊日数
 		$gstNumCond =  $_SESSION["gstNumCond"]; // 宿泊者数
 		if($_SESSION["chkNoSmkCond"] === "true"){
-			$smkFlgCond = "1"; // 禁煙フラグ 
+			$smkFlgCond = "1"; // 禁煙フラグ
 		}else{
 			$smkFlgCond = "0";
 		}
-		
+
 		$ret = $dbAccessor->getPlanListCount($htlIdCond, $smkFlgCond, $gstNumCond, $rsvDCond);
 
 	}else{
 		$ret = "0";
 	}
 
-	
+
 
 	// ホテル名リスト取得
 	$stmt = $dbAccessor->getHotelList();
@@ -88,7 +91,7 @@ $(document).ready(function(){
 	$("select[id='selRsvDNum']").val(<?php echo $_SESSION["rsvDNumCond"] ?>);
 	$("select[id='selGstNum']").val(<?php echo $_SESSION["gstNumCond"] ?>);
 	$("#chkNoSmk").attr("checked", <?php echo $_SESSION["chkNoSmkCond"] ?> );
-	
+
 });
 // 予約ボタン押下
 function fncRsv(rsvRmId, rsvPlnId){
@@ -97,7 +100,7 @@ function fncRsv(rsvRmId, rsvPlnId){
 	$("#hdnRsvRmId").val(rsvRmId);
 	$("#hdnPlnId").val(rsvPlnId);
 	$("#frmPlanList").submit();
-	
+
 }
 </script>
 <form id="frmPlanList" action="<?php print($_SERVER['PHP_SELF']) ?>" method="post">
@@ -140,7 +143,7 @@ function fncRsv(rsvRmId, rsvPlnId){
                 ?>
                 <div id="divListMain">
                     <?php // プラン一覧取得
-                        $stmtPlnList = $dbAccessor->getPlanList($htlIdCond, $smkFlgCond, $gstNumCond, $rsvDCond); 
+                        $stmtPlnList = $dbAccessor->getPlanList($htlIdCond, $smkFlgCond, $gstNumCond, $rsvDCond);
                     ?>
                     <table>
                     <?php
