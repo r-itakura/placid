@@ -4,12 +4,10 @@ import { Admin } from './admin';
 
 @Injectable()
 export class LoginService {
-    getAdmin() : Admin[] {
-        return [
-            {
-                admId : 'admin3',
-                admPass : 'admin3'
-            },
-        ];
+    getAdmin() : Admin {
+        return {
+            admId: 'hoge@example.com',
+            admPass: ''
+        };
     }
 }
